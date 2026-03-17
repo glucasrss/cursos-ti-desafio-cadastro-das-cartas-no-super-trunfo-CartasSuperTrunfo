@@ -19,6 +19,9 @@ int main() {
 
     float Densidade_PopulacionalA, Densidade_PopulacionalB;
     float PIB_per_CapitaA, PIB_per_CapitaB;
+
+    float Super_PoderA,Super_PoderB;
+    int Resultado;
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -110,6 +113,38 @@ int main() {
     printf("\nNúmero de Pontos Turísticos: %d", Pontos_TurísticosB);
     printf("\nDensidade Populacional: %.2f", Densidade_PopulacionalB);
     printf("\nPIB per Capita: %.2f", PIB_per_CapitaB);
+
+    //Cálculo e Exibição do Resultado
+    Densidade_PopulacionalB = (float) ÁreaA/PopulaçãoA;
+    Densidade_PopulacionalB = (float) ÁreaB/PopulaçãoB;
+
+    Super_PoderA = (float) PopulaçãoA + ÁreaA + PIBA + Pontos_TurísticosA + PIB_per_CapitaA + Densidade_PopulacionalA;
+    Super_PoderB = (float) PopulaçãoB + ÁreaB + PIBB + Pontos_TurísticosB + PIB_per_CapitaB + Densidade_PopulacionalB;
+
+    printf("\nVENCEDOR!\n");
+
+    Resultado = PopulaçãoA>PopulaçãoB;
+    printf("\nPopulação: %d", Resultado);
+
+    Resultado = ÁreaA>ÁreaB;
+    printf("\nÁrea: %d", Resultado);
+
+    Resultado = PIBA>PIBB;
+    printf("\nPIB: %d", Resultado);
+
+    Resultado = Pontos_TurísticosA>Pontos_TurísticosB;
+    printf("\nPontos Turísticos: %d", Resultado);
+
+    Resultado = Densidade_PopulacionalA>Densidade_PopulacionalB;
+    printf("\nDensidade Populacional: %d", Resultado);
+
+    Resultado = PIB_per_CapitaA>PIB_per_CapitaB;
+    printf("\nPIB per Capita: %d", Resultado);
+
+    Resultado = Super_PoderA>Super_PoderB;
+    printf("\nSuper Poder: %d", Resultado);
+
+    
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
